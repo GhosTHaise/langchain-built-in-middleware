@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "todo_list": "./main.py:agent"
+  },
+  "env": ".env"
+}
