@@ -6,7 +6,6 @@ from langchain.agents import create_agent
 from langchain.agents.middleware import TodoListMiddleware
 from langchain_core.tools import tool
 
-
 @tool(parse_docstring=True)
 def create_file(filename: str, content: str) -> str:
     """Create a new file with the given content.
@@ -55,7 +54,7 @@ def run_command(command: str) -> str:
 
 
 agent = create_agent(
-    model="openai:gpt-4o",
+    model="groq:llama-3.3-70b-versatile",
     tools=[create_file, run_command],
     system_prompt="You are a software development assistant.",
     middleware=[TodoListMiddleware()],
